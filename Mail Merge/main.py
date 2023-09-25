@@ -13,6 +13,6 @@ with open("./Input/Replacements/names.txt") as names_file:
 # save the letters in a directory of your choice and write the new content with the replaced sections to each letter.
     for name in range(len(name_list)):
         formatted_name = name_list[name].strip()
-        new_content = content.replace(PLACEHOLDER, formatted_name)
+        personalized_content = content.replace(PLACEHOLDER, formatted_name)
         with open(f"./Output/ReadyToSend/{formatted_name}.txt", mode="w") as new_letter:
-            new_letter.write(new_content)
+            new_letter.write(personalized_content)
